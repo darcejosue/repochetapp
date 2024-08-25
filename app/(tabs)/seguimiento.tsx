@@ -2,6 +2,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { useState } from 'react';
+import { Card } from '@/components/Card';
 
 export default function Documentacion() {
   const [maping, setMaping] = useState([1,2,3,4 ,5,6,7,8,9,10,11,12,13,14,15]) 
@@ -20,7 +21,7 @@ export default function Documentacion() {
         <Text>Agregar</Text>
     </Pressable>
     {
-        maping.map((mapping) => <Text>Holanda</Text>)
+        maping.map((mapping) => <Card key={mapping} argumento="HoliWIS"/>)
     }
    </View>
   );
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
   },
   conteiner: {
     padding:10,
+    backgroundColor: '#fff',
     alignItems: 'center'
   },
   input:{

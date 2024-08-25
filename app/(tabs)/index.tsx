@@ -13,7 +13,8 @@ export default function Inventario() {
         style={styles.input}/>
         <ScrollView>
             {
-             maping.map((mapping)=> <Stock articulo={maping[mapping-1]}/>)
+             maping.map((mapping)=> <Stock articulo={maping[mapping-1]}
+             key={mapping}/>)
             }
         </ScrollView>
         </View>
